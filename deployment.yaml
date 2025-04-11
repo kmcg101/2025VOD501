@@ -1,0 +1,3 @@
+template-file-path: ./video-on-demand-on-aws.yaml
+tags:
+  Name: VOD2025
