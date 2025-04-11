@@ -371,7 +371,7 @@
           "Type": "AWS::Lambda::Function",
           "Properties":
             {
-              "Code": { "S3Bucket": { "Fn::Sub": "solutions-${AWS::Region}" }, "S3Key": "video-on-demand-on-aws/v6.1.5/asset1e46a0211c0efa3b9ed44fba7fb78bc1c1f1dd2e526b5874b627813797b6e2ad.zip" },
+              "Code": { "ZipFile": "exports.handler = async (event) => {\n  console.log(\"Event:\", JSON.stringify(event, null, 2));\n}" },
               "Description": "Used to deploy resources not supported by CloudFormation",
               "Environment": { "Variables": { "SOLUTION_IDENTIFIER": "AwsSolution/SO0021/v6.1.5" } },
               "FunctionName": { "Fn::Join": ["", [{ "Ref": "AWS::StackName" }, "-custom-resource"]] },
